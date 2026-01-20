@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>XO Pro</title>
+  <link rel="stylesheet" href="XOXO2.CSS">
+</head>
+<body>
+  <h1>لعبة XO Pro</h1>
+
+  <!-- اختيار وضع اللعب -->
+  <div class="controls">
+    <label for="mode">وضع اللعب:</label>
+    <select id="mode">
+      <option value="pvp">لاعب ضد لاعب</option>
+      <option value="ai-easy">ضد الكمبيوتر (سهل)</option>
+      <option value="ai-hard">ضد الكمبيوتر (صعب)</option>
+    </select>
+  </div>
+
+  <!-- لوحة اللعب -->
+  <div id="board" class="board">
+    <button class="cell" data-idx="0"></button>
+    <button class="cell" data-idx="1"></button>
+    <button class="cell" data-idx="2"></button>
+    <button class="cell" data-idx="3"></button>
+    <button class="cell" data-idx="4"></button>
+    <button class="cell" data-idx="5"></button>
+    <button class="cell" data-idx="6"></button>
+    <button class="cell" data-idx="7"></button>
+    <button class="cell" data-idx="8"></button>
+  </div>
+
+  <!-- حالة الدور -->
+  <p id="status">الدور الحالي: X</p>
+  <button id="restart">إعادة اللعب</button>
+
+  <!-- لوحة الإنتاج -->
+  <section class="production-board">
+    <h2>لوحة الإنتاج</h2>
+    <div class="production-stats">
+      <div class="stat">
+        <span>إجمالي الجولات</span>
+        <strong id="totalRounds">0</strong>
+      </div>
+      <div class="stat">
+        <span>انتصارات X</span>
+        <strong id="winsX">0</strong>
+      </div>
+      <div class="stat">
+        <span>انتصارات O</span>
+        <strong id="winsO">0</strong>
+      </div>
+      <div class="stat">
+        <span>تعادلات</span>
+        <strong id="draws">0</strong>
+      </div>
+    </div>
+  </section>
+
+  <script src="XOX2.JS"></script>
+</body>
+</html>
